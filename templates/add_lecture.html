@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add Lecture
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>Добавление лекции</h1>
+        <form method="post">
+            <input type="text" name="title" id="title" class="form-control" placeholder="Тема Лекции или СРС"><br>
+            <input type="text" name="deadline" id="deadline" class="form-control" placeholder="Последний день сдачи"><br>
+            <textarea name="introduction" id="introduction" class="form-control" placeholder="Введение"></textarea><br>
+            <textarea name="text" id="text" class="form-control" placeholder="Текст Лекции"></textarea><br>
+            <input type="submit" class="btn btn-success" value="Send" >
+        </form>
+    </div>
+{% endblock %}

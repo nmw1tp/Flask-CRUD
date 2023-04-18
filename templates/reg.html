@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница для регистрации</title>
+    <link rel="stylesheet" href="/static/css/aur.css">
+    <style>
+        .container{
+            background-image: url("/img/fts.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Регистрация</h1>
+    <form>
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Регистрация</button>
+    </form>
+    <div class="social-buttons">
+        <a href="#">Регистрация через GitHub</a>
+        <a href="#">Регистрация через Google</a>
+    </div>
+</div>
+</body>
+</html>

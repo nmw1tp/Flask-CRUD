@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница для Авторизации</title>
+    <link rel="stylesheet" href="/static/css/aur.css">
+    <style>
+        .container{
+            background-image: url("/img/ftf.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Авторизация</h1>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">Войти</button>
+    </form>
+    <hr>
+    <h2>Войти с помощью социальных сетей</h2>
+    <div class="social-buttons">
+        <a href="#">Войти через Github</a>
+        <a href="#">Войти через Google</a>
+    </div>
+</div>
+<script src="/js/script.js"></script>
+</body>
+</html>

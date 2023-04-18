@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Asy's</title>
+    <style>
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">Asy</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/posts">Lecture's</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/add">Add Lecture</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">AsyTube</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Anime-Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CV</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    {% block body %}{% endblock %}
+<footer class="bg-dark text-white py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h3>Контакты</h3>
+        <p>Наш адрес: ЮКГУ</p>
+        <p>Телефон: +7 777 777 77 77</p>
+        <p>Email: asy@gmail.com</p>
+      </div>
+      <div class="col-12 col-md-6">
+        <h3>Мы в соцсетях</h3>
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="fab fa-facebook fa-lg text-white mr-2"></i>Github</a></li>
+          <li><a href="#"><i class="fab fa-twitter fa-lg text-white mr-2"></i>Twitter</a></li>
+          <li><a href="#"><i class="fab fa-instagram fa-lg text-white mr-2"></i>Linkedin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <hr class="bg-light">
+        <p class="text-center">© 2023 Asy. Все права защищены.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

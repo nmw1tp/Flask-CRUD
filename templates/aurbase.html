@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Asy's</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F738%2F738116.png&f=1&nofb=1&ipt=e8ff0ce449b309cc2f3439c3dc0c20af2877427d097871daafc25ff827574d74&ipo=images");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: background-image 1s ease;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .title {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            padding: 1rem 2rem;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            margin: 1rem;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+        .btn-auth {
+            background-color: #2196F3;
+        }
+        .btn-auth:hover {
+            background-color: #0b7dda;
+        }
+
+        /* Media queries для мобильных устройств */
+        @media (max-width: 767px) {
+            .title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            .btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 1.25rem;
+                margin: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="title" id="title">Добро пожаловать!</h1>
+    <a href="/auth" class="btn btn-auth" id="auth">Авторизация</a>
+    <a href="/reg" class="btn btn-reg" id="reg" >Регистрация</a>
+    <script>
+        const authPos = document.getElementById('auth');
+
+        authPos.style.position = 'absolute';
+        authPos.style.top = "400px";
+        authPos.style.left = "600px";
+
+        const regPos = document.getElementById('reg');
+
+        regPos.style.position = 'absolute';
+        regPos.style.top = "400px";
+        regPos.style.left = "1100px";
+
+        const title = document.getElementById("title");
+
+        title.style.position = 'absolute';
+        title.style.top = "200px";
+        title.style.left = "700px"
+    </script>
+</div>
+</body>
+</html>

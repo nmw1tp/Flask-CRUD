@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
+{% block body %}
+    <style>
+    body{
+        background-color: white;
+    }
+    </style>
+    <div class="container mt-5 ">
+        <h1>{{ post.title }}</h1>
+        <div class="alert alert-info">
+            <p>Крайний срок  :{{ post.deadline }}</p>
+            <p>{{ post.text }}</p>
+        </div>
+    </div>
+{% endblock %}

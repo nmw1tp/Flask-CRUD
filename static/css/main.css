@@ -1,0 +1,43 @@
+/* стили для основного контейнера */
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 310px;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages4.fanpop.com%2Fimage%2Fphotos%2F22400000%2Ffairy-tail-fairy-tail-22443115-1280-800.jpg&f=1&nofb=1&ipt=4cda3ebfe25db462d567b55259326f8cb6d2dddfc221ef8e9f7fb4a68c7cda68&ipo=images");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* стили для заголовка */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* стили для текста */
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* стили для кнопки */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3e8e41;
+}
