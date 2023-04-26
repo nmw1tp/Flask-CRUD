@@ -1,9 +1,12 @@
 from flask import Flask, render_template,  request, redirect
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine, or_
+from sqlalchemy.orm import scoped_session, sessionmaker
 
 app = Flask(__name__)
+app.debug = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///konf.db'
-app.config['SQLALCHEMY_DATABASE_MODIFICATIONS'] = True
+app.config['SQLALCHEMY_DATABASE_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
@@ -16,6 +19,10 @@ class Lerc(db.Model):
 
     def __repr__(self):
         return '<Lerc %r>' % self.id
+
+
+engine = create_engine('sqlite:///konf.db')
+db_session = scoped_session(sessionmaker(bind=engine))
 
 
 @app.route('/')
@@ -67,6 +74,16 @@ def add_lecture():
             return "Error"
     else:
         return render_template("add_lecture.html")
+
+
+@app.route('/search')
+def search():
+    query = request.args.get('query')
+    if query:
+        results = Lerc.query.filter(or_(Lerc.title.ilike(f"%{query}%"), Lerc.text.ilike(f"%{query}%"))).all()
+    else:
+        results = []
+    return render_template('search.html', results=results)
 
 
 if __name__ == '__main__':
