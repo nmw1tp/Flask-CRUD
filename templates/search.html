@@ -6,7 +6,7 @@ Search
 
 {% block body %}
     <div class="container mt-5">
-        <h1>Search Page</h1>
+        <h1>Поиск ответа</h1>
         <form class="pos" action="{{ url_for('search') }}" method="get">
             <label>
                 <input type="text" name="query" placeholder="Enter search query">
@@ -14,7 +14,7 @@ Search
             <button type="submit">Search</button>
         </form>
         <hr>
-    <h2>Search Results</h2>
+    <h2>Результат поиска</h2>
     {% if results %}
       {% for result in results %}
         <div>
