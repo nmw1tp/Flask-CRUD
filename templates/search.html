@@ -5,6 +5,11 @@ Search
 {% endblock %}
 
 {% block body %}
+    <style>
+    footer{
+        position:fixed;
+    }
+    </style>
     <div class="container mt-5">
         <h1>Поиск ответа</h1>
         <form class="pos" action="{{ url_for('search') }}" method="get">
