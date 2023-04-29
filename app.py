@@ -1,3 +1,4 @@
+import youtube_dl as youtube_dl
 from flask import Flask, render_template,  request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine, or_
@@ -86,5 +87,27 @@ def search():
     return render_template('search.html', results=results)
 
 
+@app.route('/video', methods=['GET', 'POST'])
+def show_video():
+    if request.method == 'POST':
+        # Получить URL-адрес видео из формы ввода
+        url = request.form['video_url']
+        try:
+            # Загрузите ссылку на видео по ссылке на YouTube
+            ydl_opts = {'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'}
+            with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+                info_dict = ydl.extract_info(url, download=False)
+                video_url = info_dict.get('url')
+
+            # Вернуть шаблон с отображением видео
+            return render_template('video.html', video_url=video_url)
+        except:
+            # Обработка ошибок, возникающих при загрузке видео
+            error_message = 'Ошибка при загрузке видео'
+            return render_template('error.html', error_message=error_message)
+    else:
+        return render_template('form.html')
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

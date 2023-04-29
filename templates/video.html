@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Video
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+         <h1>Видео проигрыватель</h1>
+            <video width="640" height="480" controls>
+              <source src="{{ video_url }}" type="video/mp4">
+              Ваш браузер не поддерживает воспроизведение видео.
+            </video>
+    </div>
+{% endblock %}
