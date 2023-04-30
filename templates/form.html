@@ -5,6 +5,11 @@ Video
 {% endblock %}
 
 {% block body %}
+    <style>
+    footer{
+        position: fixed;
+    }
+    </style>
     <div class="container mt-5">
         <h1>Введите URL-адрес видео:</h1>
             <form method="post" action="{{ url_for('show_video') }}">

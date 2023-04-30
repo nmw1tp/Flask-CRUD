@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine, or_
 from sqlalchemy.orm import scoped_session, sessionmaker
 
+
 app = Flask(__name__)
 app.debug = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///konf.db'
@@ -27,6 +28,11 @@ db_session = scoped_session(sessionmaker(bind=engine))
 
 
 @app.route('/')
+def index():
+    return render_template("dan.html", token="Hello flask+ React")
+
+
+@app.route('/hell')
 def hello():
     return render_template("hell.html")
 
@@ -104,7 +110,7 @@ def show_video():
         except:
             # Обработка ошибок, возникающих при загрузке видео
             error_message = 'Ошибка при загрузке видео'
-            return render_template('error.html', error_message=error_message)
+            return render_template('404.html', error_message=error_message)
     else:
         return render_template('form.html')
 
