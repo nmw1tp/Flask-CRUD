@@ -28,11 +28,6 @@ db_session = scoped_session(sessionmaker(bind=engine))
 
 
 @app.route('/')
-def index():
-    return render_template("dan.html", token="Hello flask+ React")
-
-
-@app.route('/hell')
 def hello():
     return render_template("hell.html")
 
